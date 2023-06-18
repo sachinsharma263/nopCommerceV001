@@ -14,11 +14,12 @@ public class Waithelper {
     public Waithelper(WebDriver driver)
     {
         this.driver=driver;
+        wait=new WebDriverWait(driver,10);
     }
 
     public void waitForPresenceOfElementedLocated(By locator)
     {
-        wait=new WebDriverWait(driver,10);
+
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 
     }
